@@ -3,5 +3,5 @@ from datetime import datetime
 # Create your models here.
 class Posts(models.Model):
     title=models.CharField(max_length=50)
-    text=models.CharField(max_length=100)
+    text=models.CharField(max_length=100000)
     created=models.DateTimeField(default=datetime.now,blank=True)

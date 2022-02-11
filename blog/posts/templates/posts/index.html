@@ -9,7 +9,19 @@
     <title>Document</title>
     <link rel="stylesheet" href="{% static 'posts/css/posts.css' %}">
 </head>
+
 <body>
-<h1>Hello</h1>
+<div class="top">
+    <h1> VENATOR'S BLOG</h1>
+</div>
+{% for post in posts %}
+<div class="text">
+
+   <a href="/post/{{post.id}}"> <h1>{{post.title}}</h1></a>
+    <h5>{{post.created}}</h5>
+    <p>{{ post.text }}</p>
+</div>
 </body>
+{% endfor %}
+
 </html>

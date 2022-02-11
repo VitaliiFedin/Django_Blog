@@ -1,3 +1,37 @@
-h1 {
-    color: red;
+body {
+    padding-left: 30%;
+    padding-right: 30%;
+    margin-top: 50px;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+
+}
+p {
+    margin: 10px;
+	padding: 0 0 10px 0;
+    text-align: center;
+}
+.text{
+    border: 2px solid red;
+    margin-top: 10px;
+    text-align: center;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+p {
+    font-size: 18px;
+}
+h5 {
+    font-size: 15px;
+}
+.top {
+    color: blue;
+    text-align: center;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    color: purple;
 }
