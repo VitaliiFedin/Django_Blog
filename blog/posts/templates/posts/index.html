@@ -6,22 +6,28 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Blog</title>
     <link rel="stylesheet" href="{% static 'posts/css/posts.css' %}">
 </head>
 
 <body>
-<div class="top">
-    <h1> VENATOR'S BLOG</h1>
+<div class="title_form">
+    <h1 class="blog_title"> VENATOR'S BLOG</h1>
 </div>
-{% for post in posts %}
-<div class="text">
 
-   <a href="/post/{{post.id}}"> <h1>{{post.title}}</h1></a>
-    <h5>{{post.created}}</h5>
-    <p>{{ post.text }}</p>
+{% for post in posts %}
+<div class="indent ">
+<div class="card">
+
+   <a class="card_title" href="/post/{{post.id}}">
+       <h1>{{post.title}}</h1>
+   </a>
+    <h5 class="card_date"> {{post.created}}</h5>
+    <p class="card_text"> {{ post.text | truncatewords:20 }}</p>
+
+</div>
+
 </div>
 </body>
 {% endfor %}
-
 </html>
