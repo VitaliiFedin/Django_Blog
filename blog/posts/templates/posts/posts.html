@@ -1,18 +1,32 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{post.title}}</title>
-    <link rel="stylesheet" href="{% static 'posts/css/details.css' %}">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>{{post.title}}</title>
+        <link rel="stylesheet" href="{% static 'posts/css/index.css' %}">
+        <link rel="icon" href="data:;base64,=">
+    </head>
+    <body>
+            <header>
+                    <div></div>
+                    <div>
+                        <a href="/" class="nav_title">VENATOR'S BLOG</a>
+                    </div>
+                    <div class="nav_links">
+                        <a class="admin_link" href="/admin">Admin</a>
+                    </div>
+            </header>
+            <div class="card-single">
 
-<body>
-<div class="top">
-    <h1 class="h1-posts"> VENATOR'S BLOG</h1>
-</div>
-<h2> {{post.title}} </h2>
-<h3> {{post.created}} </h3>
-<p class="posts_text">{{post.text}}</p>
-</body>
-</html>
+                <div class="card_header_single">
+                    <h1> {{post.title}} </h1>
+                </div>
+
+                <div class="card_body">
+                    <h3> {{post.created}} </h3>
+                    <p class="posts_text">{{post.text}}</p>
+                </div>
+            </div>
+    </body>
+    </html>
